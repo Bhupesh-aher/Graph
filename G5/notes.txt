@@ -1,0 +1,12 @@
+Summary Table: Great LeetCode BFS Graph Problems
+Problem Name	Difficulty	Key Concept
+Rotting Oranges (994)	Medium	Multi-source BFS in grid
+Word Ladder (127)	Hard	BFS in transformation graph
+Reorder Routes (1466)	Medium	BFS/DFS on directed roads
+Walls and Gates (286)	Medium	BFS to compute distances on grid
+Bus Routes (815)	Hard	BFS across bus routes
+Number of Islands	Medium	BFS for connected components
+Clone Graph	Medium	BFS for graph cloning
+Is Graph Bipartite?	Medium	BFS for coloring problem
+Connected Components	Medium	BFS to count disconnected parts
+Course Schedule / Network Delay	Medium/Hard	BFS for detection/path timing

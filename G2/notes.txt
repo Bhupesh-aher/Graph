@@ -1,0 +1,53 @@
+| Element      | 1-Based      | 0-Based        |
+| ------------ | ------------ | -------------- |
+| Node range   | 1 to n       |     0 to n-1   |
+| Array size   | n + 1        |     n          |
+| Loop         | i = 1 to n   |  i = 0 to n-1  |
+| Input adjust | No           |    u--, v--    |
+
+
+
+
+✅ 0-Based Indexing:
+vector<int> adj[n];            // Size = n (0 to n-1)
+
+for (int i = 0; i < n; i++) {  // Loop from 0 to n-1
+    // work with adj[i]
+}
+
+
+Node values: 0, 1, ..., n-1
+
+Used in: LeetCode, interviews, many C++ STL defaults
+
+No need for conversion if input is 0-based
+
+
+
+
+
+
+✅ 1-Based Indexing:
+vector<int> adj[n + 1];        // Size = n + 1 (ignore index 0)
+
+for (int i = 1; i <= n; i++) { // Loop from 1 to n
+    // work with adj[i]
+}
+
+
+Node values: 1, 2, ..., n
+
+Used in: Competitive programming platforms like Codeforces, AtCoder
+
+Use as-is if input is 1-based
+
+
+
+✅ So yes — the only actual changes needed are:
+
+| Part              | 0-Based                       | 1-Based                        |
+| ----------------- | ----------------------------- | ------------------------------ |
+| Array declaration |   vector<int> adj[n];         |  vector<int> adj[n + 1];       |
+| Loop range        |  for (int i = 0; i < n; i++)  |  for (int i = 1; i <= n; i++)  |
+| Input values      | Use as-is if 0-based          | Use as-is if 1-based           |
+| Print/Traverse    | From  0  to  n-1              | From  1  to  n                 |
