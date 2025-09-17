@@ -2,9 +2,10 @@
 using namespace std;
 
 
+// G-30
 // This solution will give you TLE on Leetcode beacuse of strict constraints
 // To successfuly submit on LeetCode we need lot of optimization just like we do in CP(competitive programming)
-// But this particular solution is gonna work absolutely fine
+// But this particular solution is gonna work absolutely fine in interviews
 
 vector<vector<string>> findLadders(string beginWord, string endWord, vector<string>& wordList) {
     unordered_set<string> st(wordList.begin(), wordList.end());
@@ -19,6 +20,8 @@ vector<vector<string>> findLadders(string beginWord, string endWord, vector<stri
         vector<string> vec = q.front();
         q.pop();
 
+        // Erase all words that has been
+        // used in the previous levels to transform
         if(vec.size() > level){
             level ++;
             for(auto it: usedOnLevel){
@@ -29,7 +32,7 @@ vector<vector<string>> findLadders(string beginWord, string endWord, vector<stri
         string word = vec.back();
         // store the ans
         if(word == endWord){
-            // the first sequence where we reached end
+            // the first sequence where we reached the endWord
             if(ans.size() == 0){
                 ans.push_back(vec);
             }
