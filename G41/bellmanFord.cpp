@@ -1,6 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// src node is 0
+// from src node we need to find shortest dist for each node
+// from node 0 to node 1 shortest path
+// from node 0 to node 2 shortest path
+// and so on till last node 
+// if last node is 6
+// node 0 to node 6 shortest path
+
+
+
 
 
 // If graph has negative edge weights or the graph has negative cycles
@@ -66,7 +76,12 @@ vector<int> bellmanFord(int V, vector<vector<int>> edges, int src){
 
 
 int main(){
+    int n = 6;
+    vector<vector<int>> edges = {{0, 1, 5}, {1, 2, -2}, {1, 5, -3}, {2, 4, 3}, {3, 2, 6}, {3, 4, -2}, {5, 3, 1}};
+    int src = 0;
+    vector<int> res = bellmanFord(n, edges, src);
     
+    for(auto it: res) cout << it << " ";
 }
 
 
@@ -74,17 +89,14 @@ int main(){
 
 
 // n m 
-// 7 10
-// 0 4 5
-// 0 1 2
-// 0 6 7
-// 1 2 3 
-// 1 3 3 
-// 4 6 2
-// 2 5 1
-// 3 6 3
-// 3 5 1
-// 6 5 1
+// 6 7
+// 0 1 5
+// 1 2 -2
+// 1 5 -3
+// 2 4 3 
+// 3 2 6
+// 3 4 -2 
+// 5 3 1
 
 
 
