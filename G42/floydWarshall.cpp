@@ -68,6 +68,7 @@ void shortestDistance(vector<vector<int>> &adjMatrix){
     }
 
     // again this step is just to put -1 back which change to 1e9
+    // which means it is not reachable even after trying via different paths
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
             if(adjMatrix[i][j] == 1e9){
