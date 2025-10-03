@@ -93,7 +93,7 @@ int MST(int V, vector<vector<int>> edges){
 
 
 // TC - O (M log M) + (M * 4 alpha) 
-// SC - O(N) for DSU
+// SC - O(2N) for DSU
 
 int main(){
     
